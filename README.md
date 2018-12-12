@@ -1,4 +1,28 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+Tic Tac Toe
+
+Internet Programming with HTML, CSS, & Javascript
+
+
+Tic Tac Toe header
+
+Footer with name and year
+
+2 player game
+To make a move, the player will use the mouse single click to mark a space. In this version, there is no provision to undo the move. As soon as the move is done, the game proceeds to the next player’s chance.
+At each move, The game will show whose move (Player A or Player B) it is. When the game ends, it displays one of the following three outcomes:
+Winner: PlayerOne = X
+Winner: PlayerTwo = O
+
+AI gameplay (optional)
+Swing GUI (optional)
+
+Object of the game : Get three sqaures in a row ( horizontal, vertical, or diagonal) To Win the Game
+
+
+
+
+
+<!-- [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 # browser-template
 
@@ -110,4 +134,4 @@ Developers should run these often!
 
 1. All content is licensed under a CC­BY­NC­SA 4.0 license.
 1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+    alternative licensing, please contact legal@ga.co. -->
