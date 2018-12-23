@@ -7,10 +7,10 @@
 
   <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-  <!-- <link rel='stylesheet' href='assets/styles/index.scss'> -->
+  <link rel='stylesheet' href='assets/styles/index.scss'>
   <link rel='stylesheet' href='assets/styles/styles.css'>
 
-  <!-- <script type='text/javascript' src='assets/scripts/js.js'></script> -->
+  <script type='text/javascript' src='assets/scripts/JS.js'></script>
 
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -21,21 +21,25 @@
   <header class='header'>
     <h1>Tic Tac Toe</h1>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal" ; span style="margin-left:80px;">Sign
+    <button type="button" id="sign-up-btn" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal" ;
+      span style="margin-left:80px;">Sign
       Up</span></button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signInModal" ; span style="margin-left:80px;">Sign
+    <button type="button" id="sign-in-btn" class="btn btn-primary" data-toggle="modal" data-target="#signInModal" ;
+      span style="margin-left:80px;">Sign
       In</span></button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signOutModal" ; span style="margin-left:80px;">Sign
+    <button type="button" id="sign-out-btn" class="btn btn-primary" data-toggle="modal" data-target="#signOutModal" ;
+      span style="margin-left:80px;">Sign
       Out</span></button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#changePasswordModal" ; span style="margin-left:80px;">Change
+    <button type="button" id="password-btn" class="btn btn-primary" data-toggle="modal" data-target="#changePasswordModal"
+      ; span style="margin-left:80px;">Change
       Password</span></button>
+    <button type="button" id="showModal" class="btn btn-primary" data-toggle="modal" data-target="#displayPastGamesModal"
+      ; span style="margin-left:70px">Display
+      Past Games</span></button>
     <!-- <button id='newGameButton' ; class="btn btn-primary" ; span style="margin-left:80px">New Game</span></button> -->
     <button onClick='beginGame()' ; class="btn btn-primary" ; span style="margin-left:80px">Reset</span></button>
-
     <button onClick='beginGame()' ; class="btn btn-primary" ; span style="margin-left:80px">New Game</span></button>
 
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#displayPastGamesModal" ; span style="margin-left:70px">Display
-      Past Games</span></button>
 
     <!-- Sign up Button -->
     <div>
@@ -47,9 +51,15 @@
             </div>
             <div class="modal-body">
               <form id='sign-up-form'>
-                <input type='text' name='credentials[email]' placeholder='Email' />
-                <input type='password' name='credentials[password]' placeholder='Password' />
-                <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password' />
+
+                <fieldset>
+                  <legend>Sign Up</legend>
+                  <input class="form-control" type='text' name='credentials[email]' placeholder='Email' />
+                  <input class="form-control" type='password' name='credentials[password]' placeholder='Password' />
+                  <input class="form-control" type='password' name='credentials[password_confirmation]' placeholder='Confirm Password' />
+                  <button type="submit" class="btn btn-primary" name="submit" value="Sign Up">Sign Up</button>
+                </fieldset>
+
               </form>
               <p id='message'></p>
             </div>
@@ -105,15 +115,17 @@
               <div>
                 <a class='borderThree' href='#exampleThree'></a>
               </div>
-              <div class='borderThree-content' id='exampleThree'>
-                <form id='change-password-form'>
-                  <input type='password' name='password[old]' placeholder='Old Password'>
-                  <input type='password' name='password[new]' placeholder='New Password'>
-                  <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password' />
-                  <input id='change-password' type='submit' value='Change Password'>
-                </form>
-                <p id='message4'></p>
-              </div>
+              <form id='change-password-form'>
+                <fieldset>
+                  <legend>Change Password</legend>
+                  <div class='borderThree-content' id='exampleThree'>
+                    <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" />
+                    <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" />
+                    <button type="submit" class="btn btn-primary" name="submit" value="Change Password">Change Password</button>
+                  </div>
+                </fieldset>
+              </form>
+              <p id='message4'></p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
@@ -132,10 +144,12 @@
               <h5 class="modal-title" id="exampleModalLabel"></h5>
             </div>
             <div class="modal-body">
-              <form id='sign-out' class='border'>
-                <div>
-                  <input type='submit' value='Sign Out !' />
-                </div>
+              <form id='sign-out-form' class='border'>
+                <fieldset>
+                  <div>
+                    <input type="submit" value="Sign out" />
+                  </div>
+                </fieldset>
               </form>
               <p id='message3'></p>
             </div>
@@ -147,7 +161,10 @@
       </div>
     </div>
 
+    <br>
+
     <!-- Display Past Games -->
+
     <div>
       <div class="modal fade" id="displayPastGamesModal">
         <div class="modal-dialog">
@@ -156,16 +173,22 @@
               <h5 class="modal-title" id="exampleModalLabel"></h5>
             </div>
             <div class="modal-body">
-              <form id='display-games'>
-                <input type='submit' value='Display Past Games'>
+              <form id='sign-out-form' class='border'>
+                <fieldset>
+                  <div>
+                    <input type="submit" value="Display Past Games" />
+                  </div>
+                </fieldset>
               </form>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-              </div>
+              <p id='message3'></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
   </header>
 
   <p id='game-message'></p>

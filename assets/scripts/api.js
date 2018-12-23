@@ -3,16 +3,20 @@
 const config = require('./config.js')
 const store = require('./store.js')
 
+// Game Create
 const game = () => {
     return $.ajax({
         url: config.apiUrl + '/games',
+        method: 'POST',
+
         headers: {
             Authorization: 'Token token=' + store.user.token
         },
-        method: 'POST',
+        data
     })
 }
 
+// User Moves
 const userMoves = function (index, value, over) {
     return $.ajax({
         url: config.apiUrl + '/games/:id',
@@ -32,6 +36,18 @@ const userMoves = function (index, value, over) {
     })
 }
 
+// Delete
+const pastGameDelete = id => {
+    return $.ajax({
+        url: config.apiUrl + '/games/' + id,
+        method: 'DELETE',
+        headers: {
+            Authorization: 'Token token=' + store.user.token
+        }
+    })
+}
+
+// Game History
 const gameHistory = () => {
     return $.ajax({
         url: config.apiUrl + '/games',
@@ -39,9 +55,12 @@ const gameHistory = () => {
         headers: {
             Authorization: 'Token token=' + store.user.token
         }
+            // data: data
+
     })
 }
 
+// Sign Up
 const signUp = data => {
     return $.ajax({
         url: config.apiUrl + '/sign-up',
@@ -50,6 +69,7 @@ const signUp = data => {
     })
 }
 
+// Sign In
 const signIn = data => {
     return $.ajax({
         url: config.apiUrl + '/sign-in',
@@ -58,6 +78,7 @@ const signIn = data => {
     })
 }
 
+// Change Password
 const changePassword = data => {
     return $.ajax({
         url: config.apiUrl + '/change-password',
@@ -65,10 +86,11 @@ const changePassword = data => {
         headers: {
             Authorizaton: 'Token token=' + store.user.token
         },
-        data: data
+        data
     })
 }
 
+// Sign Out
 const signOut = () => {
     return $.ajax({
         url: config.apiUrl + '/sign-out',
@@ -87,5 +109,6 @@ module.exports = {
     game,
     userMoves,
     gameHistory,
+    pastGameDelete
 }
 

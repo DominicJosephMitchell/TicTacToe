@@ -13,8 +13,7 @@ require('babel-polyfill')
 require('./assets/scripts/app.js')
 
 // styles
-// require('./assets/styles/index.scss')
-// require('./assets/styles/styles.css')
+require('./assets/styles/index.scss')
 
 // scripts
 require('./assets/scripts/event.js')

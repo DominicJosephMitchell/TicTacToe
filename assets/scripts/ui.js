@@ -13,26 +13,36 @@ const signUpSuccess = data => {
     // $('#signUpModal').modal('hide')
     window.setTimeout(function () {
         $('#signUpModal').modal('hide');
-    }, 1000);
+    }, 500);
 }
 
 const signUpFailure = error => {
     $('#message').text('Error on SignUp')
     $('#message').removeClass()
     $('#message').addClass('failure')
+    $('#sign-up-form').trigger('reset')
     // console.error('signUpFailure ran. Error is :', error)
 }
 
 const signInSuccess = data => {
     store.user = data.user
+    store.userSignedIn = true
+    $('#sign-up-btn').hide()
+    $('#sign-in-btn').hide()
+    $('#sign-out-btn').show()
+    $('#password-btn').show()
+    $('#animation-content').show()
+    $('#showModal').show()
+    $('#showEditModal').show()
     $('#message2').text('Signed In Successfully')
     $('#message2').removeClass()
     $('#message2').addClass('success')
+    $('#sign-in-form').trigger('reset')
     // console.log('signInSuccess ran. Error is :', data)
     // $('#signInModal').modal('hide')
     window.setTimeout(function () {
         $('#signInModal').modal('hide');
-    }, 1000);
+    }, 500);
     $('#gameBoard').css('visibility', 'visible')
 }
 
@@ -40,19 +50,29 @@ const signInFailure = error => {
     $('#message2').text('Error on SignIn')
     $('#message2').removeClass()
     $('#message2').addClass('failure')
+    $('#sign-in-form').trigger('reset')
     // console.error('signInFailure ran. Error is :', error)
 }
 
 const signOutSuccess = data => {
+    store.userSignedIn = false//added
+    $('#sign-up-btn').show()
+    $('#sign-in-btn').show()
+    $('#sign-out-btn').hide()
+    $('#password-btn').hide()
+    $('#animation-content').hide()
+    $('#showModal').hide()
+    $('#showEditModal').hide()
     store.user = null
     $('#message3').text('Signed Out Successfully')
     $('#message3').removeClass()
     $('#message3').addClass('success')
+    $('#message2').empty()
     // console.log('signOutSuccess ran. Error is :')
     // $('#signOutModal').modal('hide')
     window.setTimeout(function () {
         $('#signOutModal').modal('hide');
-    }, 1000);
+    }, 500);
     $('#gameBoard').css('visibility', 'hidden')
 }
 
@@ -68,17 +88,19 @@ const changePasswordSuccess = data => {
     $('#message4').text('Change Password Successfully')
     $('#message4').removeClass()
     $('#message4').addClass('success')
+    $('#change-password-form').trigger('reset')
     // console.log('changePasswordSuccess ran. Data is :', data)
     // $('#changePasswordModal').modal('hide')
     window.setTimeout(function () {
         $('#changePasswordModal').modal('hide');
-    }, 1000);
+    }, 500);
 }
 
 const changePasswordFailure = error => {
     $('#message4').text('Error on Change Password')
     $('#message4').removeClass()
     $('#message4').addClass('failure')
+    $('#change-password-form').trigger('reset')
     // console.error('changePasswordFailure ran. Error is :', error)
 }
 

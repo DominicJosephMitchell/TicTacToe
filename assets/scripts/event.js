@@ -9,7 +9,8 @@ const ui = require('./ui.js')
 const onSignUp = event => {
     // on // const onSignUp = function(event)
     event.preventDefault()
-    const data = getFormFields($('#sign-up-form')[0])
+    const data = getFormFields(event.target)//added
+    // const data = getFormFields($('#sign-up-form')[0])//removed
     // take this data and send it to the server
     // using a HTTP request
     api.signUp(data)
@@ -20,7 +21,8 @@ const onSignUp = event => {
 const onSignIn = event => {
     // on // const onSignUp = function(event)
     event.preventDefault()
-    const data = getFormFields($('#sign-in-form')[0])
+    const data = getFormFields(event.target)//added
+    // const data = getFormFields($('#sign-in-form')[0])//removed
     // take this data and send it to the server
     // using a HTTP request
     api.signIn(data)
@@ -39,7 +41,8 @@ const onSignOut = event => {
 const onChangePassword = event => {
     // on // const onChangePassword = function(event)
     event.preventDefault()
-    const data = getFormFields($('#change-password-form'))
+    const data = getFormFields(event.target)//added
+    // const data = getFormFields($('#change-password-form'))//removed
     // take this data and send it to the server
     // using a HTTP request
     api.changePassword(data)
@@ -47,15 +50,18 @@ const onChangePassword = event => {
         .catch(ui.changePasswordFailure) // if the request failed
 }
 
-const updateGame = function (index, value, over) {
-    api.userMoves(index, value, over)
+const updateGame = event => {
+    event.preventDefault()//added
+    const data = getFormFields(event.target)//added
+    api.userMoves(data, index, value, over)
         .then(ui.movesLogged)
         .catch(ui.movesNotLogged)
 }
 
 const newGame = function () {
     event.preventDefault()
-    api.game()
+    const data = getFormFields(event.target)//added
+    api.game(data)
         .then(ui.onNewGameSuccess)
         .catch(ui.onNewGameFailure)
 }
@@ -67,6 +73,16 @@ const pastGames = event => {
         .catch(ui.getFail)
 }
 
+const pastGamesDelete = event => {
+    event.preventDefault()
+    // deleting data input on click
+    const data = $('#delete-task').val()
+    // const data = $('#delete-todo_list[id]').val()
+    api.pastGamesDelete(data)
+        .then(ui.pastGamesDeleteSuccess) // if your request was succesful
+        .catch(ui.pastGamesDeleteFailure) // if your request failed
+}
+
 
 module.exports = {
     onSignUp,
@@ -75,5 +91,6 @@ module.exports = {
     onChangePassword,
     updateGame,
     newGame,
-    pastGames
+    pastGames,
+    pastGamesDelete
 }
