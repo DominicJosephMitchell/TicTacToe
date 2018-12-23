@@ -1,6 +1,6 @@
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/css/bootstrap';
 
-table {
+/* table {
     border-collapse: collapse;
 }
 table, th, td {
@@ -9,7 +9,8 @@ table, th, td {
     border: 1px solid black;
     padding: 0px;
     text-align: left;
-}
+} */
+
 body {
     font-family: 'Times New Roman', Times, serif;
     background: url(star1.jpg) no-repeat center center fixed;
@@ -164,7 +165,7 @@ aside {
     padding-bottom: 50px;
     text-align: center;
     border-radius: 5px;
-    color: white;
+    color: transparent;
     font-size: 1em;
 }
 
@@ -179,14 +180,14 @@ aside {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: darkkhaki; /* Fallback color */
+    background-color: tran; /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
 .modal-content {
     border-radius: 5px;
-    background-color: burlywood;
+    background-color: transparent;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
@@ -195,7 +196,7 @@ aside {
 
 /* The Close Button */
 .close {
-    color: palegoldenrod;
+    color: transparent;
     float: right;
     font-size: 28px;
     font-weight: bold;

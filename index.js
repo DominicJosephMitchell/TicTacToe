@@ -9,14 +9,18 @@ import 'bootstrap'
 require('babel-polyfill')
 
 // load manifests
+
 // scripts
 require('./assets/scripts/app.js')
 
 // styles
 require('./assets/styles/index.scss')
 
+// styles
+// require('./assets/styles/index.css')
+
 // scripts
 require('./assets/scripts/event.js')
 
 // scripts
-require('./assets/scripts/JS.js')
+// require('./assets/scripts/JS.js')
