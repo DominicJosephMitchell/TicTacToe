@@ -86,7 +86,7 @@ const changePassword = data => {
         headers: {
             Authorizaton: 'Token token=' + store.user.token
         },
-        data
+        data: data//added 2nd data
     })
 }
 
@@ -97,7 +97,8 @@ const signOut = () => {
         method: 'DELETE',
         headers: {
             Authorization: 'Token token=' + store.user.token
-        }
+        },
+        data: data//added
     })
 }
 

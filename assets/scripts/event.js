@@ -4,10 +4,12 @@
 const getFormFields = require('../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+// const store = require('./../store.js')
+// const config = require('./../config.js')
 
 
 const onSignUp = event => {
-    // on // const onSignUp = function(event)
+    // const onSignUp = function(event)
     event.preventDefault()
     const data = getFormFields(event.target)//added
     // const data = getFormFields($('#sign-up-form')[0])//removed

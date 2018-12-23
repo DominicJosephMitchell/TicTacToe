@@ -29,5 +29,6 @@ $(() => {
   $('#change-password-form').on('submit', authEvents.onChangePassword)
   $('#sign-out-form').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#newGameButton').on('click', JS.beginGame)
+  $('#newGame').on('click', JS.beginGame)
+  $('#reset').on('click', JS.beginGame)
 })
