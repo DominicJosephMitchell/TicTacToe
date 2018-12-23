@@ -37,8 +37,8 @@
       ; span style="margin-left:70px">Display
       Past Games</span></button>
     <!-- <button id='newGameButton' ; class="btn btn-primary" ; span style="margin-left:80px">New Game</span></button> -->
-    <button onClick='beginGame()' id="reset-btn" class="btn btn-primary"  span style="margin-left:80px">Reset</span></button>
-    <button onClick='beginGame()' id="newGame-btn" class="btn btn-primary"  span style="margin-left:80px">New Game</span></button>
+    <button onClick='beginGame()' id="reset-btn" class="btn btn-primary" span style="margin-left:80px">Reset</span></button>
+    <button onClick='beginGame()' id="new-game-btn" class="btn btn-primary" span style="margin-left:80px">New Game</span></button>
 
 
     <!-- Sign up Button -->
@@ -201,47 +201,52 @@
 
 
   <!-- Squares for Game Board / .container ./row /- 3 sections of divs X 3 /  -->
-  <aside>
-    <div id='gameBoard'>
-      <div class='container' span style="margin-left:80px">
-        <div class='row'>
-          <div class='flex-containerOne'>
-            <!--values for the sqaures can either be 'id' or 'data-value'  -->
-            <div class='square zoom column; flex-item' id='0'>1</div>
-            <div class='square zoom column; flex-item' id='1'>2</div>
-            <div class='square zoom column; flex-item' id='2'>3</div>
-          </div>
-          <div class='flex-containerTwo'>
-            <div class='square zoom column; flex-item' id='3'>4</div>
-            <div class='square zoom column; flex-item' id='4'>5</div>
-            <div class='square zoom column; flex-item' id='5'>6</div>
-          </div>
-          <div class='flex-containerThree'>
-            <div class='square zoom column; flex-item' id='6'>7</div>
-            <div class='square zoom column; flex-item' id='7'>8</div>
-            <div class='square zoom column; flex-item' id='8'>9</div>
+  <div id="animation-content">
+    <div class="animation-content">
+      <aside>
+        <div id='gameBoard'>
+          <div class='container' span style="margin-left:80px">
+            <div class='row'>
+              <div class='flex-containerOne'>
+                <!--values for the sqaures can either be 'id' or 'data-value'  -->
+                <div class='square zoom column; flex-item' id='0'>1</div>
+                <div class='square zoom column; flex-item' id='1'>2</div>
+                <div class='square zoom column; flex-item' id='2'>3</div>
+              </div>
+              <div class='flex-containerTwo'>
+                <div class='square zoom column; flex-item' id='3'>4</div>
+                <div class='square zoom column; flex-item' id='4'>5</div>
+                <div class='square zoom column; flex-item' id='5'>6</div>
+              </div>
+              <div class='flex-containerThree'>
+                <div class='square zoom column; flex-item' id='6'>7</div>
+                <div class='square zoom column; flex-item' id='7'>8</div>
+                <div class='square zoom column; flex-item' id='8'>9</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </aside>
+      <section>
+        <!-- Video -->
+        <div class='video'>
+          <iframe width="300" height="150" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+          </video>
+        </div>
+        <!-- Audio Song in a Loop -->
+        <div class='audio'>
+          <!-- <audio controls loop> -->
+          <iframe src="https://freemusicdownloads.world/songs/all-of-me/?player=1785"></iframe>
+          </audio>
+        </div>
+      </section>
     </div>
-  </aside>
+  </div>
 
-  <section>
-    <!-- Video -->
-    <div class='video'>
-      <iframe width="300" height="150" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-      </video>
-    </div>
-    <!-- Audio Song in a Loop -->
-    <div class='audio'>
-      <!-- <audio controls loop> -->
-      <iframe src="https://freemusicdownloads.world/songs/all-of-me/?player=1785"></iframe>
-      </audio>
-    </div>
-    <!-- footer -->
+  <!-- footer -->
+  <div>
     <footer class='footer'>&copy DJM 2018</footer>
-  </section>
-
+  </div>
 </body>
 
 </html>

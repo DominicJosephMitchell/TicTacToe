@@ -41,7 +41,7 @@ const onSignOut = event => {
 }
 
 const onChangePassword = event => {
-    // on // const onChangePassword = function(event)
+    // const onChangePassword = function(event)
     event.preventDefault()
     const data = getFormFields(event.target)//added
     // const data = getFormFields($('#change-password-form'))//removed

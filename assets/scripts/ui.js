@@ -3,7 +3,8 @@
 const store = require('./store.js')
 const JS = require('./JS.js')
 $('#reset-btn').hide()
-$('#newGame-btn').hide()
+$('#new-game-btn').hide()
+$('#animation-content').hide()
 
 
 // methods signUpSuccess,signUpFailure
@@ -34,7 +35,7 @@ const signInSuccess = data => {
     $('#sign-out-btn').show()
     $('#password-btn').show()
     $('#reset-btn').show()
-    $('#newGame-in-btn').show()
+    $('#new-game-btn').show()
     $('#animation-content').show()
     $('#showModal').show()
     $('#showEditModal').show()
@@ -65,7 +66,7 @@ const signOutSuccess = data => {
     $('#sign-out-btn').hide()
     $('#password-btn').hide()
     $('#reset-btn').hide()
-    $('#newGame-in-btn').hide()
+    $('#new-game-btn').hide()
     $('#animation-content').hide()
     $('#showModal').hide()
     $('#showEditModal').hide()

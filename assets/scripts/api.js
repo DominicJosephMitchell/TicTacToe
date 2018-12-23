@@ -98,7 +98,7 @@ const signOut = () => {
         headers: {
             Authorization: 'Token token=' + store.user.token
         },
-        data: data//added
+        // data: data//added
     })
 }
 
