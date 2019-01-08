@@ -241,11 +241,13 @@ module.exports = {
     beginGame,
     turnClick,
     turn,
-    gameOver,
-    checkWin,
     swapPlayer,
+    checkWin,
+    gameOver,
     declareWinner,
-    value,
+    emptyBoxs,
+    spotClaimed,
     checkTie,
-    placeMarker
+    placeMarker,
+    value
 }
