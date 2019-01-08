@@ -27,8 +27,12 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#sign-out-form').on('click', authEvents.onSignOut)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
-  $('#sign-out-form').on('submit', authEvents.onSignOut)
+  // $('#sign-out-form').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#newGame').on('click', JS.beginGame)
   $('#reset').on('click', JS.beginGame)
 })
+
+module.exports = {
+  userSignedIn
+}

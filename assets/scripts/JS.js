@@ -236,6 +236,6 @@ function value(square) {
 
 // 11/17/2018
 // for newgame and display past games
-// module.exports = {
-//     beginGame
-// }
+module.exports = {
+    beginGame
+}
