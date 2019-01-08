@@ -33,6 +33,6 @@ $(() => {
   $('#reset').on('click', JS.beginGame)
 })
 
-module.exports = {
-  userSignedIn
-}
+// module.exports = {
+//   userSignedIn
+// }

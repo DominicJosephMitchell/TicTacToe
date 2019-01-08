@@ -1,5 +1,7 @@
-// const gameEvents = require('./api.js');
-// const customEvent = require('./event.js');
+const gameEvents = require('./api.js');
+const customEvent = require('./event.js');
+const api = require('./api.js')
+const ui = require('./ui.js')
 
 
 let ticTacToeBoard
@@ -236,5 +238,14 @@ function value(square) {
 
 // for newgame and display past games
 module.exports = {
-    beginGame
+    beginGame,
+    turnClick,
+    turn,
+    gameOver,
+    checkWin,
+    swapPlayer,
+    declareWinner,
+    value,
+    checkTie,
+    placeMarker
 }
