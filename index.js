@@ -16,9 +16,6 @@ require('./assets/scripts/app.js')
 // styles
 require('./assets/styles/index.scss')
 
-// styles
-require('./assets/styles/index.css')
-
 // scripts
 require('./assets/scripts/event.js')
 
