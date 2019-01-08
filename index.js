@@ -17,10 +17,10 @@ require('./assets/scripts/app.js')
 require('./assets/styles/index.scss')
 
 // styles
-// require('./assets/styles/index.css')
+require('./assets/styles/index.css')
 
 // scripts
 require('./assets/scripts/event.js')
 
 // scripts
-// require('./assets/scripts/JS.js')
+require('./assets/scripts/JS.js')
