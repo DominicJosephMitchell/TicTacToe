@@ -60,7 +60,7 @@ const updateGame = event => {
         .catch(ui.movesNotLogged)
 }
 
-const newGame = function () {
+const newGame = event => {
     event.preventDefault()
     const data = getFormFields(event.target)//added
     api.game(data)

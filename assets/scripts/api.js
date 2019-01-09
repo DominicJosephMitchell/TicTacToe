@@ -56,7 +56,6 @@ const gameHistory = () => {
             Authorization: 'Token token=' + store.user.token
         }
             // data: data
-
     })
 }
 
@@ -79,14 +78,14 @@ const signIn = data => {
 }
 
 // Change Password
-const changePassword = data => {
+const changePassword = function (data) {
     return $.ajax({
         url: config.apiUrl + '/change-password',
         method: 'PATCH',
         headers: {
             Authorizaton: 'Token token=' + store.user.token
         },
-        data: data//added 2nd data
+        data//added 2nd data
     })
 }
 
@@ -103,13 +102,13 @@ const signOut = () => {
 }
 
 module.exports = {
+    game,
+    userMoves,
+    pastGameDelete,
+    gameHistory,
     signUp,
     signIn,
     changePassword,
-    signOut,
-    game,
-    userMoves,
-    gameHistory,
-    pastGameDelete
+    signOut
 }
 

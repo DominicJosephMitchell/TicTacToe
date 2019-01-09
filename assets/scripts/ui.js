@@ -2,6 +2,7 @@
 
 const store = require('./store.js')
 const JS = require('./JS.js')
+
 $('#reset-btn').hide()
 $('#new-game-btn').hide()
 $('#animation-content').hide()
@@ -11,6 +12,7 @@ $('#animation-content').hide()
 const signUpSuccess = data => {
     $('#message').text('Signed up Successfully')
     $('#message').removeClass()
+    $('#sign-up-form').trigger('reset') //added 01/08/19
     $('#message').addClass('success')
     // console.log('signUpSuccess ran. Data is :', data)
     // $('#signUpModal').modal('hide')

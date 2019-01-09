@@ -8,7 +8,7 @@
 
 const authEvents = require('./event.js')
 const store = require('./store.js')
-const JS = require('./JS.js')
+// const JS = require('./JS.js')
 
 // your JS code goes here
 
@@ -27,12 +27,9 @@ $(() => {
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#sign-out-form').on('click', authEvents.onSignOut)
   $('#change-password-form').on('submit', authEvents.onChangePassword)
-  // $('#sign-out-form').on('submit', authEvents.onSignOut)
+  $('#sign-out-form').on('submit', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
-  $('#newGame').on('click', JS.beginGame)
-  $('#reset').on('click', JS.beginGame)
+  $('#new-game-btn').on('submit', JS.beginGame)
+  $('#reset-btn').on('submit', JS.beginGame)
+  
 })
-
-// module.exports = {
-//   userSignedIn
-// }

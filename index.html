@@ -9,9 +9,9 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
   <!-- Testing scripts -->
-  <!-- <link rel='stylesheet' href='assets/styles/index.scss'>
-  <link rel='stylesheet' href='assets/styles/styles.css'>
-  <script type='text/javascript' src='assets/scripts/JS.js'></script> -->
+  <!-- <link rel='stylesheet' href='assets/styles/index.scss'> -->
+  <!-- <link rel='stylesheet' href='assets/styles/styles.css'> -->
+  <!-- <script type='text/javascript' src='assets/scripts/JS.js'></script> -->
 
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -40,157 +40,156 @@
     <!-- <button id='newGameButton' ; class="btn btn-primary" ; span style="margin-left:80px">New Game</span></button> -->
     <button onClick='beginGame()' id="reset-btn" class="btn btn-primary" span style="margin-left:80px">Reset</span></button>
     <button onClick='beginGame()' id="new-game-btn" class="btn btn-primary" span style="margin-left:80px">New Game</span></button>
-
-
-    <!-- Sign up Button -->
-    <div>
-      <div class="modal fade" id="signUpModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
-            </div>
-            <div class="modal-body">
-              <form id='sign-up-form'>
-
-                <fieldset>
-                  <legend>Sign Up</legend>
-                  <input class="form-control" type='text' name='credentials[email]' placeholder='Email' />
-                  <input class="form-control" type='password' name='credentials[password]' placeholder='Password' />
-                  <input class="form-control" type='password' name='credentials[password_confirmation]' placeholder='Confirm Password' />
-                  <button type="submit" class="btn btn-primary" name="submit" value="Sign Up">Sign Up</button>
-                </fieldset>
-
-              </form>
-              <p id='message'></p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-              <button type="button" class="btn btn-primary" id="sign-up">SAVE</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sign in Button -->
-    <div>
-      <div class="modal fade" id="signInModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
-            </div>
-            <div class="modal-body">
-              <div>
-                <a class='borderTwo' href='#exampleTwo'></a>
-              </div>
-              <div class='borderTwo-content' id='exampleTwo'>
-                <form id='sign-in-form' class='borderOne'>
-                  <div>
-                    <input type='text' name='credentials[email]' placeholder='Email' />
-                    <input type='password' name='credentials[password]' placeholder='Password' />
-                    <input type='submit' id='sign-in' value='Sign In !' />
-                  </div>
-                </form>
-                <p id='message2'></p>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Change Password -->
-    <div>
-      <div class="modal fade" id="changePasswordModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
-            </div>
-            <div class="modal-body">
-              <div>
-                <a class='borderThree' href='#exampleThree'></a>
-              </div>
-              <form id='change-password-form'>
-                <fieldset>
-                  <legend>Change Password</legend>
-                  <div class='borderThree-content' id='exampleThree'>
-                    <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" />
-                    <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" />
-                    <button type="submit" class="btn btn-primary" name="submit" value="Change Password">Change Password</button>
-                  </div>
-                </fieldset>
-              </form>
-              <p id='message4'></p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sign out Button -->
-    <div>
-      <div class="modal fade" id="signOutModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
-            </div>
-            <div class="modal-body">
-              <form id='sign-out-form' class='border'>
-                <fieldset>
-                  <div>
-                    <input type="submit" value="Sign out" />
-                  </div>
-                </fieldset>
-              </form>
-              <p id='message3'></p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <br>
-
-    <!-- Display Past Games -->
-
-    <div>
-      <div class="modal fade" id="displayPastGamesModal">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel"></h5>
-            </div>
-            <div class="modal-body">
-              <!-- <form id='sign-out-form' class='border'> -->
-                <fieldset>
-                  <div>
-                    <input type="submit" value="Display Past Games" />
-                  </div>
-                </fieldset>
-              </form>
-              <p id='message3'></p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </header>
+
+  <!-- Sign up Button -->
+  <div>
+    <div class="modal fade" id="signUpModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <form id='sign-up-form'>
+
+              <fieldset>
+                <legend>Sign Up</legend>
+                <input class="form-control" type='text' name='credentials[email]' placeholder='Email' />
+                <input class="form-control" type='password' name='credentials[password]' placeholder='Password' />
+                <input class="form-control" type='password' name='credentials[password_confirmation]' placeholder='Confirm Password' />
+                <button type="submit" class="btn btn-primary" name="submit" value="Sign Up">Sign Up</button>
+              </fieldset>
+
+            </form>
+            <p id='message'></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+            <button type="button" class="btn btn-primary" id="sign-up">SAVE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign in Button -->
+  <div>
+    <div class="modal fade" id="signInModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <div>
+              <a class='borderTwo' href='#exampleTwo'></a>
+            </div>
+            <div class='borderTwo-content' id='exampleTwo'>
+              <form id='sign-in-form' class='borderOne'>
+                <div>
+                  <input type='text' name='credentials[email]' placeholder='Email' />
+                  <input type='password' name='credentials[password]' placeholder='Password' />
+                  <input type='submit' id='sign-in' value='Sign In !' />
+                </div>
+              </form>
+              <p id='message2'></p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Password -->
+  <div>
+    <div class="modal fade" id="changePasswordModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <div>
+              <a class='borderThree' href='#exampleThree'></a>
+            </div>
+            <form id='change-password-form'>
+              <fieldset>
+                <legend>Change Password</legend>
+                <div class='borderThree-content' id='exampleThree'>
+                  <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" />
+                  <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" />
+                  <button type="submit" class="btn btn-primary" name="submit" value="Change Password">Change Password</button>
+                </div>
+              </fieldset>
+            </form>
+            <p id='message4'></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign out Button -->
+  <div>
+    <div class="modal fade" id="signOutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <form id='sign-out-form' class='border'>
+              <fieldset>
+                <div>
+                  <input type="submit" value="Sign out" />
+                </div>
+              </fieldset>
+            </form>
+            <p id='message3'></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Display Past Games -->
+
+  <div>
+    <div class="modal fade" id="displayPastGamesModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <form id='sign-out-form' class='border'>
+              <fieldset>
+                <div>
+                  <input type="submit" value="Display Past Games" />
+                </div>
+              </fieldset>
+            </form>
+            <p id='message5'></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <p id='game-message'></p>
   <div id='game-board'></div>
