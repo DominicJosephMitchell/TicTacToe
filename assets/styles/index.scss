@@ -42,6 +42,22 @@ body {
     color: orangered;
 }
 
+/* Footer */
+.footer {
+    -webkit-animation: pulse 40s infinite alternate;
+    /* background: gray; */
+    color: orangered;
+    bottom: 100px;
+    float: right;
+    border-radius: 200px;
+    width: 300px;
+    position: relative;
+    left: 590px;
+    /* margin: 0px 0px 0px 0px;
+    padding: 10px 10px; */
+}
+
+
 h1 {
     font-weight: bolder;
     font-size: 5em;
@@ -90,6 +106,7 @@ aside {
 }
 /* individual sqaures */
 .flex-item {
+    border-radius: 75px;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
@@ -133,24 +150,6 @@ aside {
     left: 290px;
     float: right;
 }
-
-/* Footer */
-.footer {
-    -webkit-animation: pulse 40s infinite alternate;
-    /* background: gray; */
-    color: orangered;
-    bottom: 100px;
-    float: right;
-    border-radius: 200px;
-    width: 300px;
-    position: relative;
-    left: 590px;
-    float: right;
-
-    /* margin: 0px 0px 0px 0px;
-    padding: 10px 10px; */
-}
-
 
 .endgame {
     display: none;
