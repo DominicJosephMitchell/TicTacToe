@@ -85,7 +85,7 @@ const changePassword = function (data) {
         headers: {
             Authorizaton: 'Token token=' + store.user.token
         },
-        data//added 2nd data
+        data
     })
 }
 
