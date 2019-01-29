@@ -69,8 +69,6 @@ function swapPlayer(currentPlayer) {
     return currentPlayer
 }
 
-
-
 function checkWin(board, player) {
     const plays = board.reduce((a, e, i) =>
         (e === player) ? a.concat(i) : a, [])
