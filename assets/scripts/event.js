@@ -14,6 +14,7 @@ const onSignUp = event => {
 }
 
 const onSignIn = event => {
+    debugger
     event.preventDefault()
     const data = getFormFields(event.target)
     api.signIn(data)
