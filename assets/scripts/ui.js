@@ -11,11 +11,11 @@ $('#animation-content').hide()
 const signUpSuccess = data => {
     $('#message').text('Signed up Successfully')
     $('#message').removeClass()
-    $('#sign-up-form').trigger('reset') 
+    $('#sign-up-form').trigger('reset')
     $('#message').addClass('success')
     // $('#signUpModal').modal('hide')
     window.setTimeout(function () {
-    $('#signUpModal').modal('hide');
+        $('#signUpModal').modal('hide');
     }, 500);
 }
 
@@ -102,6 +102,10 @@ const changePasswordFailure = error => {
     $('#message4').removeClass()
     $('#message4').addClass('failure')
     $('#change-password-form').trigger('reset')
+    // window.setTimeout(function () {
+    //     $('#changePasswordModal').modal('hide');
+    // }, 500);
+
 }
 
 const gameSuccess = () => {

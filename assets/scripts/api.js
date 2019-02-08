@@ -79,12 +79,14 @@ const signIn = data => {
 
 // Change Password
 const changePassword = function (data) {
+// const changePassword = data => {
     return $.ajax({
         url: config.apiUrl + '/change-password',
         method: 'PATCH',
         headers: {
             Authorizaton: 'Token token=' + store.user.token
         },
+        // data: data
         data
     })
 }
