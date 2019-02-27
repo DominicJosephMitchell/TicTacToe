@@ -124,7 +124,7 @@ const onNewGameSuccess = (data) => {
     // $('#new-game').hide()
     app.game = data.game
     app.game.id = data.game.id
-    JS.beginGame()
+    JS.beginGame
 }
 
 const onNewGameFailure = (data) => {

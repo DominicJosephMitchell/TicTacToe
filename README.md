@@ -18,7 +18,7 @@ Swing GUI (optional)
 
 Object of the game : Get three sqaures in a row ( horizontal, vertical, or diagonal) To Win the Game
 
-
+grunt serve-to run locally
 
 
 
