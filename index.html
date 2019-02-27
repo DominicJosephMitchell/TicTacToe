@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tic-Tac-Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+    <style>
+
+      .header {
+    -webkit-animation: pulse 40s infinite alternate;
+    /* background: gray; */
+    border-radius: 100px;
+    color: orangered;
+}
+     /* Safari 4.0 - 8.0 */
+   @-webkit-keyframes pulse {
+    0% {background-color: rgba(0,0,0,0.2);}
+    10% {background-color: rgba(0,0,0,0.4);}
+    20% {background-color: rgba(0,0,0,0.6);}
+    30% {background-color: rgba(0,0,0,0.8);}
+    40% {background-color: rgba(0,0,0,0.6);}
+    50% {background-color: rgba(0,0,0,0.4);}
+    30% {background-color: rgba(0,0,0,0.2);}
+    80% {background-color: rgba(0,0,0,0.4);}
+    100% {background-color: rgba(0,0,0,0.6);}
+ }
+ /* Standard syntax */
+ @keyframes example {
+     from {background-color: lightgray;}
+     to {background-color: lightgray;}
+ }
+    </style>
+
+</head>
+
+<body>
+  <header class='header'>
+    <h1>Tic Tac Toe</h1>
+
+    <button type="button" id="sign-up-btn" class="btn btn-outline-secondary" data-toggle="modal" data-target="#signUpModal" ;
+      span style="margin-left:80px;">Sign
+      Up</span></button>
+    <button type="button" id="sign-in-btn" class="btn btn-outline-secondary" data-toggle="modal" data-target="#signInModal" ;
+      span style="margin-left:80px;">Sign
+      In</span></button>
+    <button type="button" id="sign-out-btn" class="btn btn-outline-secondary" data-toggle="modal" data-target="#signOutModal" ;
+      span style="margin-left:80px;">Sign
+      Out</span></button>
+    
+      <!-- <button type="button" id="password-btn" class="btn btn-outline-secondary" data-toggle="modal" data-target="#changePasswordModal"
+      ; span style="margin-left:80px;">Change
+      Password</span></button> -->
+    
+      <!-- <button type="button" id="showModal" class="btn btn-outline-secondary" data-toggle="modal" data-target="#displayPastGamesModal"
+      ; span style="margin-left:400px">Display
+      Past Games</span></button> -->
+
+    <!-- <button onClick='beginGame()' id="reset-btn" class="btn btn-outline-secondary" span style="margin-left:80px">Reset</span></button> -->
+   
+    <!-- <button onClick="JS.beginGame()" id="new-game-btn" class="btn btn-outline-secondary" span style="margin-left:80px">New Game</span></button> -->
+  </header>
+
+  <!-- Sign up Button -->
+  <div>
+    <div class="modal fade" id="signUpModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <form id='sign-up-form'>
+
+              <fieldset>
+                <legend>Sign Up</legend>
+                <input class="form-control" type='text' name='credentials[email]' placeholder='Email' />
+                <input class="form-control" type='password' name='credentials[password]' placeholder='Password' />
+                <input class="form-control" type='password' name='credentials[password_confirmation]' placeholder='Confirm Password' />
+                <button type="submit" class="btn btn-primary" name="submit" value="Sign Up">Sign Up</button>
+              </fieldset>
+
+            </form>
+            <p id='message'></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+            <button type="button" class="btn btn-outline-secondary" id="sign-up">SAVE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign in Button -->
+  <div>
+    <div class="modal fade" id="signInModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <div>
+              <a class='borderTwo' href='#exampleTwo'></a>
+            </div>
+            <div class='borderTwo-content' id='exampleTwo'>
+              <form id='sign-in-form' class='borderOne'>
+                <div>
+                  <input type='text' name='credentials[email]' placeholder='Email' />
+                  <input type='password' name='credentials[password]' placeholder='Password' />
+                  <input type='submit' id='sign-in' value='Sign In !' />
+                </div>
+              </form>
+              <p id='message2'></p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change Password -->
+  <div>
+    <div class="modal fade" id="changePasswordModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <div>
+              <a class='borderThree' href='#exampleThree'></a>
+            </div>
+            <form id='change-password-form'>
+              <fieldset>
+                <legend>Change Password</legend>
+                <div class='borderThree-content' id='exampleThree'>
+                  <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" />
+                  <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" />
+                  <button type="submit" class="btn btn-outline-secondary" name="submit" value="Change Password">Change Password</button>
+                </div>
+              </fieldset>
+            </form>
+            <p id='message4'></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sign out Button -->
+  <div>
+    <div class="modal fade" id="signOutModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <form id='sign-out-form' class='border'>
+              <fieldset>
+                <div>
+                  <input type="submit" value="Sign out" />
+                </div>
+              </fieldset>
+            </form>
+            <p id='message3'></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Display Past Games -->
+
+  <div>
+    <div class="modal fade" id="displayPastGamesModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+          </div>
+          <div class="modal-body">
+            <form id='display-past-games-form' class='border'>
+              <fieldset>
+                <div>
+                  <input type="submit" value="Display Past Games" />
+                </div>
+              </fieldset>
+            </form>
+            <p id='message5'></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p id='game-message'></p>
+  <div id='game-board'></div>
+  <p id='testing'></p>
+  </div>
+  <div class='endgame'>
+    <div class='text'></div>
+  </div>
+
+
+  <!-- Squares for Game Board / .container ./row /- 3 sections of divs X 3 /  -->
+  <div id="animation-content">
+    <div class="animation-content">
+      <aside>
+        <div id='gameBoard'>
+          <div class='container' span style="margin-left:80px">
+            <div class='row'>
+              <div class='flex-containerOne'>
+                <!--values for the sqaures can either be 'id' or 'data-value'  -->
+                <div class='square zoom column; flex-item' id='0'>1</div>
+                <div class='square zoom column; flex-item' id='1'>2</div>
+                <div class='square zoom column; flex-item' id='2'>3</div>
+              </div>
+              <div class='flex-containerTwo'>
+                <div class='square zoom column; flex-item' id='3'>4</div>
+                <div class='square zoom column; flex-item' id='4'>5</div>
+                <div class='square zoom column; flex-item' id='5'>6</div>
+              </div>
+              <div class='flex-containerThree'>
+                <div class='square zoom column; flex-item' id='6'>7</div>
+                <div class='square zoom column; flex-item' id='7'>8</div>
+                <div class='square zoom column; flex-item' id='8'>9</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <section>
+        <!-- Video -->
+        <div class='video'>
+          <iframe width="300" height="150" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+          </video>
+        </div>
+        <!-- Audio Song in a Loop -->
+        <div class='audio'>
+            <iframe width="100%" height="300" frameborder="no" src="https://freemusicdownloads.world/songs/all-of-me/?player=1785"></iframe>
+          </audio>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div>
+    <footer class='footer'>&copy DJM 2018</footer>
+  </div>
+</body>
+
+</html>
